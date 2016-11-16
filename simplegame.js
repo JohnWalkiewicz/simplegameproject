@@ -1,4 +1,4 @@
-/*BAT MOVEMENT*/
+/*OWL MOVEMENT*/
 var owl = document.getElementById("owl")
 var owlXPosition = Number(owl.getAttribute("x"));
 var owlYPosition = Number(owl.getAttribute("y"));
@@ -21,3 +21,20 @@ document.addEventListener("keydown", function(e){
     owlYPosition = owlYPosition + 1;
   }
 });
+
+/*OWL COLLSIONS*/
+var mice = document.getElementById("mice");
+
+
+var miceX = Number(mice.getAttribute("x"));
+var miceY = Number(mice.getAttribute("y"));
+
+var miceWidth = Number(owl.getAttribute("width"))
+var miceHeight = Number(owl.getAttribute("height"));
+
+if(owlXPosition > miceX && owlXPosition < miceX + miceWidth && owlYPosition > miceY &&  owlYPosition < miceY + miceHeight){
+  mice.setAttribute("fill-opacity", "0");
+}
+else{
+
+}
