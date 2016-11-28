@@ -1,10 +1,11 @@
 
 
 /*OWL MOVEMENT*/
-var owlXPosition = Number(owl.getAttribute("x"));
-var owlYPosition = Number(owl.getAttribute("y"));
+
 document.addEventListener("keydown", function(e){
   var owl = document.getElementById("owl")
+  var owlXPosition = Number(owl.getAttribute("x"));
+  var owlYPosition = Number(owl.getAttribute("y"));
 
   function RandomNumberGenertor(min,max){
     return Math.floor((Math.random()*(max-min+1)+min));
