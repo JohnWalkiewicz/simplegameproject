@@ -14,11 +14,11 @@
       <animate id="mice1BottomToTop" attributeName="y" from="100" to="0" dur="2s" begin="0s; mice1TopToBottom.end"/>
     </image>
 
-  <!--  <image id="mice" x="40" y="0" width="5" height="5" xlink:href="http://2.bp.blogspot.com/-3JkpLXRztO0/VVx050HV0XI/AAAAAAAAEZ8/KGJdAbaeRHk/s1600/partdner1.png">
+    <image id="mice2" x="40" y="0" width="15" height="15" xlink:href="http://2.bp.blogspot.com/-3JkpLXRztO0/VVx050HV0XI/AAAAAAAAEZ8/KGJdAbaeRHk/s1600/partdner1.png">
       <animate id="mice2TopToBottom" attributeName="y" from="0" to="100" dur="4s" begin="0s; mice2BottomToTop.end"/>
       <animate id="mice2BottomToTop" attributeName="y" from="100" to="0" dur="4s" begin="0s; mice2TopToBottom.end"/>
     </image>
-
+<!--
     <image id="mice" x="60" y="0" width="5" height="5" xlink:href="http://2.bp.blogspot.com/-3JkpLXRztO0/VVx050HV0XI/AAAAAAAAEZ8/KGJdAbaeRHk/s1600/partdner1.png">
       <animate id="mice3TopToBottom" attributeName="y" from="0" to="100" dur="5s" begin="0s; mice3BottomToTop.end"/>
       <animate id="mice3BottomToTop" attributeName="y" from="100" to="0" dur="5s" begin="0s; mice3TopToBottom.end"/>
@@ -76,8 +76,9 @@
 
 
         <!--TEXT-->
-        <text x="150" y="30" font-family="sans-serif" font-size="5" fill="red"> Eaten:</text>
+        <text  id="foodEatenText" x="150" y="30" font-family="sans-serif" font-size="5" fill="red"> Eaten:</text>
         <text x="150" y="50" font-family="sans-serif" font-size="5" fill="red"> Taken:</text>
+        <text  id="foodCounterText" x="170" y="30" font-family="sans-serif" font-size="5" fill="red"></text>
 
     </svg>
     <script src="simplegame.js"></script>
