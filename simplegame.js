@@ -1,7 +1,10 @@
+  var timeStart = Date.now();
+  var gameOver = false;
 
-
+var timeStop;
 /*OWL MOVEMENT*/
 var numberOfFoodEaten = 0;
+
 document.addEventListener("keydown", function(e){
   var owl = document.getElementById("owl")
   var owlXPosition = Number(owl.getAttribute("x"));
@@ -12,9 +15,7 @@ document.addEventListener("keydown", function(e){
   }
 
 
-
-
-
+  var timeTotal;
 
 
   var mice = document.getElementById("mice");
@@ -28,6 +29,10 @@ document.addEventListener("keydown", function(e){
   var mice2Y = Number(mice2.getAttribute("y"));
   var mice2Width = Number(mice2.getAttribute("width"))
   var mice2Height = Number(mice2.getAttribute("height"));
+ if(gameOver == false){
+
+
+
   if(e.keyCode == 37){
     owl.setAttribute("x", owlXPosition - 1)
     owlXPosition = owlXPosition - 1;
@@ -49,6 +54,7 @@ document.addEventListener("keydown", function(e){
 
     }
 
+
   }
   else if(e.keyCode == 39){
     owl.setAttribute("x", owlXPosition + 1)
@@ -68,6 +74,7 @@ document.addEventListener("keydown", function(e){
       numberOfFoodEaten = numberOfFoodEaten + 1;
       document.getElementById("foodCounterText").textContent = numberOfFoodEaten;
     }
+
   }
   else if(e.keyCode == 38){
     owl.setAttribute("y", owlYPosition - 1)
@@ -87,6 +94,7 @@ document.addEventListener("keydown", function(e){
       numberOfFoodEaten = numberOfFoodEaten + 1;
       document.getElementById("foodCounterText").textContent = numberOfFoodEaten;
     }
+
   }
   else if(e.keyCode == 40){
     owl.setAttribute("y", owlYPosition + 1)
@@ -106,5 +114,17 @@ document.addEventListener("keydown", function(e){
       numberOfFoodEaten = numberOfFoodEaten + 1;
       document.getElementById("foodCounterText").textContent = numberOfFoodEaten;
     }
+
+
+  if(numberOfFoodEaten >= 10){
+      timeStop = Date.now();
+      gameOver = true;
+      document.getElementById("gameCanvas").pauseAnimations()
+    document.getElementById("timeTaken").textContent = (timeStop - timeStart)/1000;
+    document.getElementById("gameOverText").setAttribute("opacity", "1")
   }
+}
+else{
+}
+}
 });
